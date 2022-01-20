@@ -63,9 +63,9 @@ export default function User() {
             <h1 className="text-xl text-gray-800 font-bold">Seus produtos</h1>
            {produtos}
 
-            
-            <div className="flex flex-wrap justify-center md:justify-start gap-2 w-full max-w-[1000px] bg-sky-200 my-5 rounded-md p-3">
-                 
+           <h2 className="text-gray-800 font-bold mt-5">Recomendamos:</h2>
+            <div className="flex flex-wrap justify-center md:justify-start gap-2 w-full max-w-[1000px]my-5 rounded-md">
+                
                  {recomendados}
              </div>
         </div>

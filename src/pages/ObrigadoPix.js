@@ -19,16 +19,16 @@ export default function Pix() {
      const [moreProduct,setMoreProduct] = useState([])
      const [isPending, setIsPending] = useState(true)
      useEffect(() => {
-        setMoreProduct(recomendadosContext)
+        setMoreProduct(recomendadosContext.more_products)
      },[])
 
 
      
     const recomendados = moreProduct.map(product =>
         <CardObrigado
-        key={product.name}
-        link={'/pagamento/'+data.hash_received}
-        image={product.image_product}
+        key={product.hash}
+        link={`/pagamento/`+product.hash}
+        image={product.image_url}
         title={product.name}
         description={product.description}
         price={product.price}
@@ -63,7 +63,7 @@ export default function Pix() {
             <div className="text-left w-full max-w-[1000px] px-2">
             <h6 className="mt-10 text-gray-800 text-md font-bold">Recomendamos:</h6>
 
-            <div className="flex flex-wrap justify-center md:justify-start gap-2 w-full max-w-[1000px] bg-sky-200 my-5 rounded-md">
+            <div className="flex flex-wrap justify-center md:justify-start gap-2 w-full max-w-[1000px] my-5 rounded-md">
             {recomendados}
             </div>
             </div>

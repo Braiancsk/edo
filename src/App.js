@@ -13,6 +13,7 @@ import {DataContext} from './DataContext'
 import {ProductContextContainer} from './ProductContext'
 import {MoreProducts} from './MoreContext.js'
 import {ToastContainer} from 'react-toastify';
+import Email from './pages/Email';
 function App() {
 
   return (
@@ -31,6 +32,10 @@ function App() {
 
       <Route path="/login">
         <Login/>
+      </Route>
+
+      <Route path="/email?e=email">
+        <Email/>
       </Route>
 
       <Route path="/user">

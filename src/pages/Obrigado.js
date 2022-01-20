@@ -13,7 +13,7 @@ export default function Obrigado() {
     const [moreProduct,setMoreProduct] = useState([])
     // const [isPending, setIsPending] = useState(true)
     useEffect(() => {
-        setMoreProduct(recomendadosContext)
+        setMoreProduct(recomendadosContext.more_products)
     },[])
 
     const recomendados = moreProduct.map(product =>

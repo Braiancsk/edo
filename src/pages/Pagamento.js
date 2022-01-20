@@ -165,6 +165,7 @@ export default function Pagamento() {
             } catch(err){
                 toast.error(err.message)
                 setIsProcessing(false)
+               
             }
    
             
@@ -204,7 +205,7 @@ export default function Pagamento() {
              setRecomendados(response.data.context)
              setDataPix(response.data.context.qr_code)
              //add a redirect to the obrigadoPix page
-            history.push(`/pix/${hash}/${response.data.context.key}`)
+            history.push(`/pix/${response.data.context.key}`)
             
              
                       
